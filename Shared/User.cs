@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace CaseFichasMedicas.Server.Models
+namespace CaseFichasMedicas.Shared
 {
     public class User
     {

@@ -1,13 +1,34 @@
 ﻿@page "/admin"
 
-
-
+@inject IRoleService RoleService
 
 <h3>AdminPage</h3>
 
+<h2>teste1</h2>
 
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Role</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var role in RoleService.Roles)
+        {
+            <tr>
+                <td>@role.ID</td>
+                <td>@role.RoleName</td>
+            </tr>
+        }
+    </tbody>
+</table>
 
 
 @code {
+    protected override async Task OnInitializedAsync()
+    {
+        await RoleService.GetRoles();
+    }
 
 }

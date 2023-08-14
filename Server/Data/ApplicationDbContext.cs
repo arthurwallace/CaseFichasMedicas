@@ -13,5 +13,6 @@ namespace CaseFichasMedicas.Server.Data
             IOptions<OperationalStoreOptions> operationalStoreOptions) : base(options, operationalStoreOptions)
         {
         }
+        public DbSet<CaseFichasMedicas.Server.Models.Role>? Role { get; set; }
     }
 }

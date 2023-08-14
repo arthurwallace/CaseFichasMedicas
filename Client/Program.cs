@@ -1,3 +1,5 @@
+global using CaseFichasMedicas.Client.Services.RoleService;
+global using CaseFichasMedicas.Shared;
 using CaseFichasMedicas.Client;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Authentication;
@@ -12,7 +14,7 @@ builder.Services.AddHttpClient("CaseFichasMedicas.ServerAPI", client => client.B
 
 // Supply HttpClient instances that include access tokens when making requests to the server project
 builder.Services.AddScoped(sp => sp.GetRequiredService<IHttpClientFactory>().CreateClient("CaseFichasMedicas.ServerAPI"));
-
+builder.Services.AddScoped<IRoleService, RoleService>();
 builder.Services.AddApiAuthorization();
 
 await builder.Build().RunAsync();

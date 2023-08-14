@@ -1,4 +1,4 @@
-﻿namespace CaseFichasMedicas.Server.Models
+﻿namespace CaseFichasMedicas.Shared
 {
     public class Role
     {
